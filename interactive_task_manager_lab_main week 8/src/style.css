@@ -1,0 +1,145 @@
+/* Global Reset & Theme Variables */
+:root {
+    --bg-color: #f4f7f6;
+    --card-color: #ffffff;
+    --primary-color: #4a90e2;
+    --text-color: #333333;
+    --low-priority: #2ecc71;
+    --medium-priority: #f1c40f;
+    --high-priority: #e74c3c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: var(--primary-color);
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Form Styles */
+.form-section {
+    background: var(--card-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    height: fit-content;
+}
+
+.form-section h2, .list-section h2 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--bg-color);
+    padding-bottom: 5px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #357abd;
+}
+
+/* Task Item Card UI Layout */
+#task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task-item {
+    background: var(--card-color);
+    padding: 15px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-left: 5px solid transparent;
+}
+
+/* Border modifiers based on dataset priority traits */
+.task-item.low { border-left-color: var(--low-priority); }
+.task-item.medium { border-left-color: var(--medium-priority); }
+.task-item.high { border-left-color: var(--high-priority); }
+
+.task-item.completed span {
+    text-decoration: line-through;
+    color: #888888;
+}
+
+.task-actions button {
+    width: auto;
+    padding: 5px 10px;
+    margin-left: 5px;
+    font-size: 0.85rem;
+}
+
+.delete-btn {
+    background-color: var(--high-priority);
+}
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.toggle-btn {
+    background-color: var(--low-priority);
+}
+.toggle-btn:hover {
+    background-color: #27ae60;
+}

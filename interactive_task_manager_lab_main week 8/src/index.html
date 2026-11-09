@@ -1,0 +1,66 @@
+<!--
+Week of October 26.
+Lab Activity: Interactive Task Manager (To-Do List)
+Web Programming — Course Lab Assignment
+Due: Week of Nov. 2nd, 2026
+Objective
+Build a persistent, interactive **Task Manager Web Application** using semantic **HTML5**,
+modern **CSS3**, and **Vanilla JavaScript**. You will practice capturing user interactions 
+via **Events and Event Handlers**, organizing application logic with **Functions**, and 
+managing client-side data persistence using **JSON** and **localStorage**.
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab: Interactive Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Task Manager Dashboard</h1>
+      <p>Manage your daily activities seamlessly</p>
+    </header>
+
+    <main>
+      <!-- Form Section to Add Tasks -->
+      <section class="form-section">
+        <h2>Create a New Task</h2>
+        <form id="task-form">
+          <div class="input-group">
+            <label for="task-title">Task Description</label>
+            <input
+              type="text"
+              id="task-title"
+              placeholder="e.g., Study for Web Exam"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="task-priority">Priority</label>
+            <select id="task-priority">
+              <option value="low">Low Priority</option>
+              <option value="medium" selected>Medium Priority</option>
+              <option value="high">High Priority</option>
+            </select>
+          </div>
+
+          <button type="submit" id="add-btn">Add Task</button>
+        </form>
+      </section>
+
+      <!-- Display Section for Registered Tasks -->
+      <section class="list-section">
+        <h2>Your Tasks</h2>
+        <div id="task-list">
+          <!-- Dynamically generated task items will go here -->
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
