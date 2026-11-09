@@ -4,7 +4,7 @@
  * Module:          Web Programming
  * Assignment:     Lab Activity - Interactive Task Manager (Week 8)
  * Date:           2026-11-3
- * GitHub Repo:    [YOUR REPO URL]
+ * GitHub Repo:    https://github.com/Richardecarr/2305843_Carr_Richard_To-Do-List
  *
  * Description:
  * A persistent task manager built with Vanilla JavaScript.
